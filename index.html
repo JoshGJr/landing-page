@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Josh</title>
+  <meta name="description" content="Josh's personal site: anime, projects, and ways to get in touch.">
+  <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a href="#top" class="brand">Josh<span class="brand-jp" aria-hidden="true">ジョシュ</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="eyebrow">こんにちは! Hi, I'm</p>
+        <h1>Josh<span class="accent">.</span></h1>
+        <p class="lead">
+          Anime fan, story lover, and <span id="typed" class="typed">builder of things</span>.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">See my projects</a>
+          <a href="#contact" class="btn btn-ghost">Say hi</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <span class="kanji">夢</span>
+      </div>
+    </section>
+
+    <section id="about" class="section container reveal">
+      <h2><span class="section-jp" aria-hidden="true">自己紹介</span>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>I'm Josh, and I love anime. What hooks me is the storytelling: a slow-burn character arc, a perfectly timed opening, a fight scene that's been building for three seasons.</p>
+          <p>I'm always looking for the next series to start, and I like making things that let me share that with other fans.</p>
+        </div>
+        <div class="favorites">
+          <h3>Current favorites</h3>
+          <ul>
+            <li><span>Fullmetal Alchemist: Brotherhood</span></li>
+            <li><span>Cowboy Bebop</span></li>
+            <li><span>Attack on Titan</span></li>
+            <li><span>Spirited Away</span></li>
+          </ul>
+          <p class="hint">Edit these in <code>index.html</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="montage" class="section container reveal">
+      <h2><span class="section-jp" aria-hidden="true">名場面</span>Anime Moments</h2>
+      <p class="lead montage-lead">Every feeling anime can hand you, in about a minute and a half.</p>
+
+      <div class="stage" role="region" aria-roledescription="carousel" aria-label="Anime moments montage" tabindex="0">
+        <div class="slides">
+          <article data-youtube="pkKu9hLT-t8" data-start="0" class="slide fx-action" style="--c1:#9d4edd;--c2:#12031f" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">ドォン!!</span>
+            <div class="caption"><span class="mood">Action</span><h3>Jujutsu Kaisen</h3><p>Gojo fuses Red and Blue into Hollow Purple, and everything in its path disappears.</p></div>
+          </article>
+          <article data-clip="konosuba" class="slide fx-funny" style="--c1:#ff4d6d;--c2:#3a0a1f" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">ドカーン!</span>
+            <div class="caption"><span class="mood">Funny</span><h3>KonoSuba</h3><p>Megumin fires off her one explosion a day, face-plants, and Kazuma has to carry her home.</p></div>
+          </article>
+          <article data-clip="kaguya-sama" class="slide fx-cute" style="--c1:#ff7aa8;--c2:#3b0f3f" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">ドキドキ</span>
+            <div class="caption"><span class="mood">Awkward &amp; cute</span><h3>Kaguya-sama: Love Is War</h3><p>Two geniuses too proud to confess spend a whole episode scheming to make the other say it first.</p></div>
+          </article>
+          <article data-clip="dragon-ball-z" class="slide fx-action" style="--c1:#ffb703;--c2:#5a0a12" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">ゴゴゴ</span>
+            <div class="caption"><span class="mood">Epic</span><h3>Dragon Ball Z</h3><p>Goku's hair flashes gold as the ground cracks, and Frieza finally stops smiling.</p></div>
+          </article>
+          <article data-clip="haikyuu" class="slide fx-funny" style="--c1:#e01e37;--c2:#0a0710" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">バシッ!</span>
+            <div class="caption"><span class="mood">Hype</span><h3>Haikyuu!!</h3><p>One serve, one block, one rally that feels like it lasts a whole episode.</p></div>
+          </article>
+          <article data-clip="your-name" class="slide fx-heart" style="--c1:#ff8fb1;--c2:#2b1055" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">運命</span>
+            <div class="caption"><span class="mood">Heartfelt</span><h3>Your Name</h3><p>At twilight, two strangers race to write down the name they're about to forget.</p></div>
+          </article>
+          <article data-clip="attack-on-titan" class="slide fx-action" style="--c1:#c1121f;--c2:#0b0b0f" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">ザシュッ!</span>
+            <div class="caption"><span class="mood">Action</span><h3>Attack on Titan</h3><p>Levi spins through the trees and carves up a Titan before it can blink.</p></div>
+          </article>
+          <article data-clip="spy-x-family" class="slide fx-cute" style="--c1:#ff9ecb;--c2:#4a1259" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">ワクワク</span>
+            <div class="caption"><span class="mood">Cute</span><h3>Spy x Family</h3><p>Anya's smug little grin says she heard everything. She absolutely did.</p></div>
+          </article>
+          <article data-clip="one-piece" class="slide fx-heart" style="--c1:#ff6b4a;--c2:#2a0b3d" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">ありがとう</span>
+            <div class="caption"><span class="mood">Emotional</span><h3>One Piece</h3><p>The Straw Hats say a quiet goodbye to the Going Merry, and nobody holds it together.</p></div>
+          </article>
+          <article data-clip="mushishi" class="slide fx-calm" style="--c1:#8e7dff;--c2:#0f0a1f" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">しん…</span>
+            <div class="caption"><span class="mood">Wonder &middot; hidden gem</span><h3>Mushishi</h3><p>A lone traveler follows strange, gentle spirits through misty forests, and the world slows right down.</p></div>
+          </article>
+          <article data-clip="nichijou" class="slide fx-funny" style="--c1:#ff3d71;--c2:#2d0b4a" aria-roledescription="slide">
+            <div class="fx" aria-hidden="true"></div>
+            <span class="sfx" aria-hidden="true">ズコー!</span>
+            <div class="caption"><span class="mood">Funny &middot; hidden gem</span><h3>Nichijou</h3><p>A normal school day goes completely off the rails, with perfect comedic timing.</p></div>
+          </article>
+        </div>
+
+        <div class="stage-controls">
+          <button type="button" class="ctl ctl-prev" aria-label="Previous slide">&#8249;</button>
+          <button type="button" class="ctl ctl-play" aria-label="Pause slideshow">&#10074;&#10074;</button>
+          <button type="button" class="ctl ctl-next" aria-label="Next slide">&#8250;</button>
+          <button type="button" class="ctl ctl-sound" aria-label="Turn sound on" aria-pressed="false">&#128263;</button>
+          <div class="dots" role="group" aria-label="Choose a slide"></div>
+        </div>
+        <div class="progress" aria-hidden="true"><div class="progress-bar"></div></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container reveal">
+      <h2><span class="section-jp" aria-hidden="true">作品</span>Projects</h2>
+      <div class="project-grid">
+        <article class="card">
+          <span class="card-num" aria-hidden="true">01</span>
+          <h3>Watchlist Tracker</h3>
+          <p>A small app for tracking what I'm watching, what I've finished, and what's next in the queue.</p>
+          <ul class="tags"><li>JavaScript</li><li>Web</li></ul>
+          <a href="#" class="card-link">View project &rarr;</a>
+        </article>
+        <article class="card">
+          <span class="card-num" aria-hidden="true">02</span>
+          <h3>Season Reviews</h3>
+          <p>Short write-ups on each season I watch: what worked, what didn't, and who should watch it.</p>
+          <ul class="tags"><li>Writing</li><li>Anime</li></ul>
+          <a href="#" class="card-link">View project &rarr;</a>
+        </article>
+        <article class="card">
+          <span class="card-num" aria-hidden="true">03</span>
+          <h3>Recommendation Quiz</h3>
+          <p>Answer a few questions and get a show recommendation based on what you already like.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+          <a href="#" class="card-link">View project &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container reveal">
+      <h2><span class="section-jp" aria-hidden="true">連絡</span>Contact</h2>
+      <p class="lead">Want to talk anime, swap recommendations, or work on something together? Send me a message.</p>
+      <form class="contact-form" data-email="you@example.com">
+        <label>Name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label class="full">Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <ul class="socials">
+        <li><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><a href="https://myanimelist.net/">MyAnimeList</a></li>
+        <li><a href="https://github.com/">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>&copy; <span id="year"></span> Josh &middot; またね!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
