@@ -38,6 +38,22 @@ themeBtn.addEventListener("click", () => {
 });
 syncThemeBtn();
 
+// Pause / play the decorative motion (typewriter, petals, floating sun).
+// Starts paused when the visitor prefers reduced motion.
+const motionBtn = document.querySelector(".motion-toggle");
+let motionOn = !reduceMotion;
+
+function syncMotion() {
+  root.classList.toggle("motion-off", !motionOn);
+  motionBtn.setAttribute("aria-label", motionOn ? "Pause animations" : "Play animations");
+}
+
+motionBtn.addEventListener("click", () => {
+  motionOn = !motionOn;
+  syncMotion();
+});
+syncMotion();
+
 // Highlight the nav link for the section in view
 const navLinks = [...links.querySelectorAll("a")];
 const sections = navLinks.map((a) => document.querySelector(a.getAttribute("href")));
@@ -73,12 +89,18 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
 const typed = document.getElementById("typed");
 const phrases = ["builder of things", "binge-watcher", "manga reader", "seasonal anime tracker"];
 
-if (!reduceMotion) {
+{
   let phrase = 0;
   let char = phrases[0].length;
   let deleting = true;
 
   const tick = () => {
+    if (!motionOn) {
+      typed.textContent = phrases[phrase];
+      char = phrases[phrase].length;
+      deleting = true;
+      return setTimeout(tick, 500);
+    }
     const word = phrases[phrase];
     char += deleting ? -1 : 1;
     typed.textContent = word.slice(0, char);
@@ -99,8 +121,9 @@ if (!reduceMotion) {
 }
 
 // Falling sakura petals
-if (!reduceMotion) {
+{
   const spawnPetal = () => {
+    if (!motionOn) return;
     const petal = document.createElement("span");
     petal.className = "petal";
     petal.style.left = `${Math.random() * 100}vw`;
