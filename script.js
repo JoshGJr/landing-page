@@ -344,6 +344,5 @@ form.addEventListener("submit", (e) => {
   const subject = encodeURIComponent(`Hello from ${data.get("name")}`);
   const body = encodeURIComponent(`${data.get("message")}\n\nFrom: ${data.get("name")} <${data.get("email")}>`);
   window.location.href = `mailto:${form.dataset.email}?subject=${subject}&body=${body}`;
-  status.textContent = "Opening your email app... ありがとう!";
-  form.reset();
+  status.textContent = `Opening your email app... ありがとう! If nothing opens, email ${form.dataset.email} directly. Your message is still here.`;
 });
