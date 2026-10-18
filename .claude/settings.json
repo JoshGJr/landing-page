@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const j=JSON.parse(d),i=j.tool_input||{};let m='';if(j.tool_name==='Edit'||j.tool_name==='Write'){const b=require('path').basename(i.file_path||'');if(b==='.env'||b.startsWith('.env.'))m='editing '+b}else if(/\\brm\\s+(-\\S+\\s+)*-(\\w*[rR]\\w*|-recursive)/.test(i.command||'')||/remove-item\\b.*-recurse/i.test(i.command||''))m='recursive delete';if(m){console.error('Blocked: '+m+' is not allowed in this project.');process.exit(2)}})\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const f=JSON.parse(d).tool_input?.file_path;if(f&&['.html','.css','.js','.json','.md'].some(e=>f.endsWith(e)))require('child_process').spawnSync('npx',['--yes','prettier','--write',f],{stdio:'inherit',shell:true})})\""
+          }
+        ]
+      }
+    ]
+  }
+}
